@@ -10,5 +10,5 @@ test('binaryDir', () => {
 });
 
 test('version()', async () => {
-  expect(await binary.version()).toBeTruthy();
+  expect(await binary.version()).toMatch(/^V\d\.\d{2}/);
 });

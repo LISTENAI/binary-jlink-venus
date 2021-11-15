@@ -1,6 +1,9 @@
 import { join } from 'path';
-import { Library } from 'ffi-napi';
+import { promisify } from 'util';
+import { execFile as _execFile } from 'child_process';
 import { Binary } from '@binary/type';
+
+const execFile = promisify(_execFile);
 
 export const HOME = join(__dirname, '..', 'binary');
 
@@ -18,17 +21,8 @@ export default <Binary>{
       }
     })();
 
-    const lib = new Library(join(this.binaryDir, libFile), {
-      'JLINKARM_GetDLLVersion': ['int', []],
-    });
-
-    const version = lib.JLINKARM_GetDLLVersion();
-    const major = Math.floor(version / 1_00_00);
-    const minor = `${Math.floor(version / 1_00) % 1_00}`.padStart(2, '0');
-
-    const idx = version % 1_00;
-    const rev = idx == 0 ? '' : String.fromCodePoint('a'.charCodeAt(0) + (idx - 1));
-
-    return `V${major}.${minor}${rev}`;
+    const versionExe = join(__dirname, '..', `jlink-version_${process.platform}`);
+    const { stdout } = await execFile(versionExe, [join(this.binaryDir, libFile)]);
+    return stdout.trim();
   }
 };
