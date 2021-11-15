@@ -1,6 +1,6 @@
 {
   "name": "@binary/jlink",
-  "version": "1.0.0-7.58",
+  "version": "1.0.1-7.58",
   "description": "jlink",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,12 +19,11 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@binary/type": "^1.0.3",
-    "@xingrz/download2": "^9.0.0-alpha.2",
+    "@binary/type": "^1.0.4",
+    "@xingrz/download2": "^9.0.0-alpha.4",
     "ffi-napi": "^4.0.3"
   },
   "devDependencies": {
-    "@types/download": "^8.0.1",
     "@types/ffi-napi": "^4.0.4",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.1",
