@@ -1,5 +1,5 @@
 import download from '@xingrz/download2';
-import { rm } from 'fs/promises';
+import { rm, copy } from 'fs-extra';
 import { join } from 'path';
 import { symlink } from 'fs/promises';
 import binary, { HOME } from './index';
@@ -29,5 +29,7 @@ const URL = `https://cdn.iflyos.cn/public/lisa-binary/${PACKAGE}/${NAME}`;
     await symlink('JFlash.app/Contents/MacOS/JFlashExe', join(binary.binaryDir, 'JFlash'));
     await symlink('JLinkExe', join(binary.binaryDir, 'JLink'));
   }
+
+  await copy(join(__dirname, '..', 'fixture'), binary.binaryDir);
 
 })();

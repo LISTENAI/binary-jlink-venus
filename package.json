@@ -20,9 +20,11 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@binary/type": "^1.0.4",
-    "@xingrz/download2": "^9.0.0-alpha.4"
+    "@xingrz/download2": "^9.0.0-alpha.4",
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.1",
     "jest": "^27.3.1",
