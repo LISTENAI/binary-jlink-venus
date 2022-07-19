@@ -15,7 +15,9 @@
   },
   "author": "xychen <xychen@listenai.com>",
   "maintainers": [
-    "xychen <xychen@listenai.com"
+    "xychen <xychen@listenai.com",
+    "lpmadmin <lpm.admin@listenai.com>",
+    "zbzhao <zbzhao@listenai.com>"
   ],
   "license": "UNLICENSED",
   "dependencies": {
