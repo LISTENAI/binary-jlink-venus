@@ -1,6 +1,6 @@
 {
   "name": "@binary/jlink-venus",
-  "version": "1.0.0-7.58",
+  "version": "1.0.1-7.58",
   "description": "jlink-venus",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
