@@ -1361,4 +1361,10 @@
     <ChipInfo Vendor="ListenAI" Name="Venus" Core="JLINK_CORE_CORTEX_M33" WorkRAMAddr="0x80000" WorkRAMSize="0x50000" />
     <FlashBankInfo Name="Internal Flash" BaseAddr="0x18000000" MaxSize="0x800000" Loader="Devices/ListenAI/Venus_flashloader.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
   </Device>
+
+  <Device>
+    <ChipInfo Vendor="ListenAI" Name="Venus_32MB" Core="JLINK_CORE_CORTEX_M33" WorkRAMAddr="0x80000" WorkRAMSize="0x50000" />
+    <FlashBankInfo Name="Internal Flash" BaseAddr="0x18000000" MaxSize="0x2000000" Loader="Devices/ListenAI/Venus_flashloader_32MB.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
+  </Device>
+
 </DataBase>
